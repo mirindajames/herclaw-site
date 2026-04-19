@@ -1,16 +1,16 @@
 const features = [
   "Step-by-step Mac install walkthrough",
-  "Telegram setup and first working assistant",
-  "Memory system and identity file setup",
-  "Safe permissions and security basics",
-  "Five starter workspace templates",
-  "Starter automations and common fixes",
+  "Telegram setup and your first working assistant",
+  "Identity, memory, and workspace file setup",
+  "Safe permissions and beginner security basics",
+  "Five starter templates for real use cases",
+  "Starter automations, troubleshooting, and next steps",
 ];
 
 const whoItsFor = [
-  "Absolute beginners who want a clear path in",
-  "Non-technical women who want a useful AI assistant",
-  "Founders, writers, and creators who want leverage",
+  "Absolute beginners who want a calm path into OpenClaw",
+  "Non-technical women who want a useful AI assistant without getting lost in tooling",
+  "Founders, writers, and creators who want leverage for work, content, and life admin",
 ];
 
 const templates = [
@@ -19,6 +19,13 @@ const templates = [
   "Writing assistant",
   "Life admin assistant",
   "Content assistant",
+];
+
+const outcomes = [
+  "A working OpenClaw setup on your Mac",
+  "A personalized assistant with a clear identity",
+  "A usable memory system that makes the assistant more reliable over time",
+  "Starter templates and automations you can use immediately",
 ];
 
 export default function Home() {
@@ -38,7 +45,7 @@ export default function Home() {
           </a>
         </div>
 
-        <div className="grid items-center gap-10 lg:grid-cols-[1.1fr_0.9fr]">
+        <div className="grid items-center gap-10 lg:grid-cols-[1.08fr_0.92fr]">
           <div>
             <div className="inline-flex rounded-full border border-[var(--border)] bg-white/70 px-4 py-2 text-xs font-medium text-[var(--muted)] backdrop-blur">
               OpenClaw, made clear for women
@@ -96,10 +103,12 @@ export default function Home() {
             <h2 className="mt-4 text-2xl font-semibold">Most OpenClaw tutorials are powerful, but not actually beginner-safe.</h2>
           </div>
           <div className="text-[var(--muted)] leading-8">
-            They are often too fragmented, too technical, too optimized for people who already live in dev tools, and too weak on the part that matters most: building something you will actually use.
+            They are often too fragmented, too technical, too optimized for people who already live in developer tools,
+            and too weak on the part that matters most: building something you will actually use.
           </div>
           <div className="text-[var(--muted)] leading-8">
-            HerClaw gives you a cleaner setup path, a stronger starting system, and practical templates designed for real outcomes instead of endless tinkering.
+            HerClaw gives you a cleaner setup path, a stronger starting system, and practical templates designed for
+            real outcomes instead of endless tinkering.
           </div>
         </div>
       </section>
@@ -149,6 +158,22 @@ export default function Home() {
             {whoItsFor.map((item) => (
               <div key={item} className="rounded-[1.5rem] border border-[var(--border)] bg-white/80 p-6 text-lg leading-8 text-[var(--foreground)]">
                 {item}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-6 py-8 sm:px-8 lg:px-10">
+        <div className="grid gap-8 rounded-[2rem] border border-[var(--border)] bg-white/70 p-8 shadow-[var(--shadow)] lg:grid-cols-[1fr_1fr]">
+          <div>
+            <div className="text-sm font-semibold uppercase tracking-[0.22em] text-[var(--muted)]">What you’ll walk away with</div>
+            <h2 className="mt-4 text-3xl font-semibold">A system that actually works, not just a folder of advice.</h2>
+          </div>
+          <div className="space-y-4">
+            {outcomes.map((outcome) => (
+              <div key={outcome} className="rounded-[1.25rem] border border-[var(--border)] bg-[var(--background)] p-5 text-base font-medium">
+                {outcome}
               </div>
             ))}
           </div>
@@ -217,7 +242,7 @@ export default function Home() {
               Get the free checklist first
             </a>
           </div>
-          <p className="mt-5 text-sm text-[var(--muted)]">Checkout and delivery wiring can be connected to Stripe in the next step.</p>
+          <p className="mt-5 text-sm text-[var(--muted)]">Stripe checkout and email capture can be wired in as the next step.</p>
         </div>
       </section>
     </main>
