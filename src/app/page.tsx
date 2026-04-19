@@ -1,15 +1,15 @@
-const steps = [
+const howItWorks = [
   {
-    title: "Install OpenClaw the right way",
-    body: "Follow a clean Mac setup path without bouncing between confusing tutorials, half-explained commands, and technical rabbit holes.",
+    step: "Step 1",
+    title: "Install OpenClaw with a simple guided setup",
   },
   {
-    title: "Set up an assistant that actually helps",
-    body: "Use the HerClaw templates to create an assistant for writing, business, research, content, or life admin instead of starting from a blank page.",
+    step: "Step 2",
+    title: "Customize your AI assistant for content, work, or business",
   },
   {
-    title: "Turn it into real leverage",
-    body: "Move from 'I installed it' to 'this saves me time and helps me make progress' with memory, structure, and beginner-safe automations.",
+    step: "Step 3",
+    title: "Use your assistant daily to automate tasks and create income opportunities",
   },
 ];
 
@@ -53,6 +53,29 @@ const outcomes = [
   "A repeatable system for content or income",
   "Confidence using AI tools daily",
   "A clear path to monetizing your skills online",
+];
+
+const testimonials = [
+  {
+    quote: "I was completely overwhelmed by AI tools before this. HerClaw made it actually click for me.",
+    name: "Early User",
+  },
+  {
+    quote: "I finally feel like I understand how to use AI in a practical way.",
+    name: "Beta Tester",
+  },
+  {
+    quote: "This made OpenClaw feel less intimidating and much more useful for real work.",
+    name: "Starter Kit User",
+  },
+];
+
+const valueStack = [
+  "Step-by-step setup walkthrough ($49 value)",
+  "AI assistant customization guide ($39 value)",
+  "Content + income use cases ($29 value)",
+  "Beginner AI workflows ($39 value)",
+  "Templates and systems ($29 value)",
 ];
 
 export default function Home() {
@@ -111,6 +134,27 @@ export default function Home() {
                 Buy now
               </a>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-white py-20 sm:py-24 lg:py-28">
+        <div className="mx-auto max-w-5xl px-6 sm:px-8 lg:px-10">
+          <div className="mx-auto max-w-4xl text-center">
+            <p className="text-sm font-medium text-[#6e6e73]">How HerClaw Works</p>
+            <h2 className="mt-3 text-4xl font-semibold tracking-[-0.04em] sm:text-5xl">
+              A simple path from AI overwhelm to daily use.
+            </h2>
+          </div>
+          <div className="mt-14 grid gap-5 md:grid-cols-3">
+            {howItWorks.map((item) => (
+              <div key={item.title} className="rounded-[1.75rem] bg-[#f5f5f7] p-8 ring-1 ring-black/5">
+                <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-white text-sm font-semibold text-[#1d1d1f] shadow-[0_8px_24px_rgba(0,0,0,0.06)]">
+                  {item.step.replace("Step ", "")}
+                </div>
+                <h3 className="text-2xl font-semibold tracking-[-0.03em]">{item.title}</h3>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -189,26 +233,60 @@ export default function Home() {
       </section>
 
       <section className="py-20 sm:py-24 lg:py-28">
-        <div className="mx-auto max-w-6xl px-6 sm:px-8 lg:px-10">
-          <div className="mx-auto max-w-4xl text-center">
-            <p className="text-sm font-medium text-[#6e6e73]">How it works</p>
+        <div className="mx-auto max-w-5xl px-6 sm:px-8 lg:px-10">
+          <div className="text-center">
+            <p className="text-sm font-medium text-[#6e6e73]">Women are already using HerClaw to simplify AI</p>
             <h2 className="mt-3 text-4xl font-semibold tracking-[-0.04em] sm:text-5xl">
-              A simple 3-step system.
+              Practical. Clear. Much less overwhelming.
             </h2>
           </div>
           <div className="mt-14 grid gap-5 md:grid-cols-3">
-            {steps.map((step, index) => (
-              <div key={step.title} className="rounded-[1.9rem] bg-white p-8 shadow-[0_16px_50px_rgba(0,0,0,0.06)] ring-1 ring-black/5">
-                <div className="text-sm font-medium text-[#6e6e73]">0{index + 1}</div>
-                <h3 className="mt-4 text-2xl font-semibold tracking-[-0.03em]">{step.title}</h3>
-                <p className="mt-4 text-lg leading-8 text-[#6e6e73]">{step.body}</p>
+            {testimonials.map((item) => (
+              <div key={item.quote} className="rounded-[1.75rem] bg-white p-8 shadow-[0_16px_50px_rgba(0,0,0,0.06)] ring-1 ring-black/5">
+                <p className="text-lg leading-8 text-[#1d1d1f]">“{item.quote}”</p>
+                <p className="mt-5 text-sm font-medium text-[#6e6e73]">— {item.name}</p>
               </div>
             ))}
+          </div>
+          <div className="mt-10 text-center">
+            <a href="#buy" className="text-base font-medium text-[#0071e3] transition hover:text-[#0077ed]">
+              Start with the Starter Kit &gt;
+            </a>
           </div>
         </div>
       </section>
 
       <section className="bg-white py-20 sm:py-24 lg:py-28">
+        <div className="mx-auto max-w-5xl px-6 sm:px-8 lg:px-10">
+          <div className="text-center">
+            <p className="text-sm font-medium text-[#6e6e73]">What’s inside the Starter Kit</p>
+            <h2 className="mt-3 text-4xl font-semibold tracking-[-0.04em] sm:text-5xl">
+              More value than a simple guide.
+            </h2>
+          </div>
+          <div className="mt-14 rounded-[2rem] bg-[#f5f5f7] p-8 ring-1 ring-black/5 sm:p-10">
+            <div className="grid gap-4">
+              {valueStack.map((item) => (
+                <div key={item} className="rounded-[1.25rem] bg-white px-5 py-4 shadow-[0_10px_30px_rgba(0,0,0,0.04)]">
+                  <p className="text-lg leading-8 text-[#1d1d1f]">{item}</p>
+                </div>
+              ))}
+            </div>
+            <div className="mt-8 flex flex-col gap-3 border-t border-black/8 pt-8 text-center sm:flex-row sm:items-end sm:justify-center sm:gap-8">
+              <div>
+                <p className="text-sm text-[#6e6e73]">Total value</p>
+                <p className="text-3xl font-semibold tracking-[-0.03em]">$185+</p>
+              </div>
+              <div>
+                <p className="text-sm text-[#6e6e73]">Today</p>
+                <p className="text-4xl font-semibold tracking-[-0.04em] text-[#1d1d1f]">$39</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 sm:py-24 lg:py-28">
         <div className="mx-auto max-w-5xl px-6 sm:px-8 lg:px-10">
           <div className="text-center">
             <p className="text-sm font-medium text-[#6e6e73]">What you’ll walk away with</p>
@@ -252,12 +330,12 @@ export default function Home() {
 
       <section id="free" className="bg-[#0b0b0b] py-20 text-white sm:py-24 lg:py-28">
         <div className="mx-auto max-w-5xl px-6 text-center sm:px-8 lg:px-10">
-          <p className="text-sm font-medium text-white/55">Low-risk first step</p>
+          <p className="text-sm font-medium text-white/55">Not ready to buy yet?</p>
           <h2 className="mt-3 text-4xl font-semibold tracking-[-0.04em] sm:text-5xl">
-            Get the free checklist first.
+            Download the free AI Starter Checklist.
           </h2>
           <p className="mx-auto mt-6 max-w-3xl text-xl leading-8 text-white/70">
-            Start with “7 Beginner Mistakes to Avoid When Setting Up OpenClaw” if you want a lighter first step before buying.
+            Get the free AI Starter Checklist and learn how to set up your first assistant step-by-step.
           </p>
           <form className="mx-auto mt-10 flex max-w-2xl flex-col gap-4 sm:flex-row">
             <input
@@ -269,16 +347,16 @@ export default function Home() {
               type="submit"
               className="rounded-full bg-[#0071e3] px-7 py-4 text-base font-medium text-white transition hover:bg-[#0077ed]"
             >
-              Get the checklist
+              Download Free Checklist
             </button>
           </form>
         </div>
       </section>
 
       <section id="buy" className="mx-auto max-w-5xl px-6 py-20 text-center sm:px-8 lg:px-10 lg:py-28">
-        <p className="text-sm font-medium text-[#6e6e73]">Strong call to action</p>
+        <p className="text-sm font-medium text-[#6e6e73]">Start building your AI advantage today</p>
         <h2 className="mt-3 text-4xl font-semibold tracking-[-0.04em] sm:text-5xl">
-          Start with the HerClaw Starter Kit.
+          You don’t need to be technical. You just need a clear system.
         </h2>
         <p className="mx-auto mt-6 max-w-3xl text-xl leading-8 text-[#6e6e73]">
           If you want the fastest path from AI overwhelm to a useful personal income assistant, start here.
@@ -289,16 +367,16 @@ export default function Home() {
             href="/checkout"
             className="inline-flex min-w-[240px] items-center justify-center rounded-full bg-[#0071e3] px-8 py-4 text-base font-medium text-white transition hover:bg-[#0077ed]"
           >
-            Buy the Starter Kit
+            Get the Starter Kit — $39
           </a>
           <a
             href="#free"
             className="inline-flex min-w-[240px] items-center justify-center rounded-full px-8 py-4 text-base font-medium text-[#0071e3] transition hover:text-[#0077ed]"
           >
-            Try the free checklist first &gt;
+            Download Free Checklist
           </a>
         </div>
-        <p className="mt-6 text-sm text-[#6e6e73]">Clean, simple, beginner-clear. Stripe checkout can be connected next.</p>
+        <p className="mt-4 text-sm text-[#6e6e73]">Early access pricing — may increase soon</p>
       </section>
     </main>
   );
