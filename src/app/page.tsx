@@ -34,6 +34,27 @@ const objections = [
   },
 ];
 
+const soundsLikeYou = [
+  "You keep hearing about AI… but don’t know where to start",
+  "Everything feels too technical or confusing",
+  "You’ve tried tools but nothing actually sticks",
+  "You want to make money online but don’t have a clear system",
+];
+
+const productBullets = [
+  "Set up your own AI assistant",
+  "Use it for content, business, and income",
+  "Automate tasks that normally take hours",
+  "Actually turn AI into leverage (not just entertainment)",
+];
+
+const outcomes = [
+  "A working AI assistant customized to you",
+  "A repeatable system for content or income",
+  "Confidence using AI tools daily",
+  "A clear path to monetizing your skills online",
+];
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-[#f5f5f7] text-[#1d1d1f]">
@@ -52,20 +73,28 @@ export default function Home() {
       <section className="mx-auto max-w-6xl px-6 pb-20 pt-18 text-center sm:px-8 sm:pb-28 sm:pt-24 lg:px-10 lg:pb-32 lg:pt-28">
         <p className="text-sm font-medium text-[#6e6e73]">A beginner-clear OpenClaw system for women</p>
         <h1 className="mx-auto mt-4 max-w-5xl text-5xl font-semibold tracking-[-0.05em] sm:text-6xl lg:text-7xl">
-          Build an AI assistant that actually helps you make money online.
+          Turn AI into your personal income assistant — even if you’re not tech-savvy.
         </h1>
         <p className="mx-auto mt-6 max-w-3xl text-xl leading-8 text-[#6e6e73] sm:text-2xl">
-          HerClaw is for beginner women, non-technical women, and women founders who want to install OpenClaw, use it confidently, and turn it into real leverage for work, content, and business.
+          Build a simple AI system that helps you create content, automate tasks, and start making money online — without coding, overwhelm, or guesswork.
+        </p>
+        <p className="mx-auto mt-5 max-w-3xl text-base leading-7 text-[#6e6e73] sm:text-lg">
+          Designed for women who feel stuck, overwhelmed by tech, or unsure how to actually use AI to improve their life and income.
         </p>
         <div className="mt-10 flex justify-center">
           <a
             href="#buy"
             className="rounded-full bg-[#0071e3] px-8 py-4 text-base font-medium text-white transition hover:bg-[#0077ed]"
           >
-            Get the Starter Kit for $39
+            Get the HerClaw Starter Kit — $39
           </a>
         </div>
-        <div className="mt-14 overflow-hidden rounded-[2.25rem] bg-[radial-gradient(circle_at_top,#ffffff, #ececf1)] px-6 py-10 shadow-[0_40px_120px_rgba(0,0,0,0.10)] sm:px-10 sm:py-14">
+        <div className="mt-4 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-sm text-[#6e6e73]">
+          <span>Beginner-friendly</span>
+          <span>Step-by-step system</span>
+          <span>No coding required</span>
+        </div>
+        <div className="mt-14 overflow-hidden rounded-[2.25rem] bg-[radial-gradient(circle_at_top,#ffffff,#ececf1)] px-6 py-10 shadow-[0_40px_120px_rgba(0,0,0,0.10)] sm:px-10 sm:py-14">
           <div className="mx-auto max-w-4xl rounded-[2rem] bg-[#090909] px-7 py-9 text-left text-white sm:px-10 sm:py-12">
             <p className="text-sm uppercase tracking-[0.16em] text-white/50">HerClaw Starter Kit</p>
             <div className="mt-5 flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
@@ -87,15 +116,24 @@ export default function Home() {
       </section>
 
       <section className="bg-white py-20 sm:py-24 lg:py-28">
-        <div className="mx-auto max-w-5xl px-6 text-center sm:px-8 lg:px-10">
-          <p className="text-sm font-medium text-[#6e6e73]">The frustration</p>
-          <h2 className="mt-3 text-4xl font-semibold tracking-[-0.04em] sm:text-5xl">
-            You know AI could help you. But OpenClaw still feels confusing, technical, and out of reach.
-          </h2>
-          <p className="mx-auto mt-6 max-w-3xl text-xl leading-8 text-[#6e6e73]">
-            Most guides assume you already think like a developer. Most tutorials are fragmented. Most setups stop at “installed” instead of helping you create something that genuinely supports your work and income.
+        <div className="mx-auto max-w-5xl px-6 sm:px-8 lg:px-10">
+          <div className="text-center">
+            <p className="text-sm font-medium text-[#6e6e73]">Does this sound like you?</p>
+            <h2 className="mt-3 text-4xl font-semibold tracking-[-0.04em] sm:text-5xl">
+              You’re interested in AI, but still stuck at the starting line.
+            </h2>
+          </div>
+          <div className="mt-12 grid gap-4">
+            {soundsLikeYou.map((item) => (
+              <div key={item} className="rounded-[1.75rem] bg-[#f5f5f7] p-7 ring-1 ring-black/5">
+                <p className="text-xl leading-8 tracking-[-0.02em] text-[#1d1d1f]">{item}</p>
+              </div>
+            ))}
+          </div>
+          <p className="mt-8 text-center text-xl font-medium tracking-[-0.02em] text-[#1d1d1f]">
+            That’s exactly why HerClaw exists.
           </p>
-          <div className="mt-10">
+          <div className="mt-8 text-center">
             <a href="#buy" className="text-base font-medium text-[#0071e3] transition hover:text-[#0077ed]">
               Get the Starter Kit &gt;
             </a>
@@ -124,23 +162,16 @@ export default function Home() {
       <section className="bg-[#0b0b0b] py-20 text-white sm:py-24 lg:py-28">
         <div className="mx-auto max-w-6xl px-6 sm:px-8 lg:px-10">
           <div className="mx-auto max-w-4xl text-center">
-            <p className="text-sm font-medium text-white/55">The solution</p>
+            <p className="text-sm font-medium text-white/55">What is HerClaw?</p>
             <h2 className="mt-3 text-4xl font-semibold tracking-[-0.04em] sm:text-5xl">
-              The HerClaw Starter Kit gives you the fastest clean path from confusion to capability.
+              A beginner-first system for turning AI into real leverage.
             </h2>
             <p className="mx-auto mt-6 max-w-3xl text-xl leading-8 text-white/70">
-              You get the install guide, setup walkthrough, memory structure, assistant templates, starter automations, and beginner-safe security guidance in one system.
+              HerClaw is a beginner-first system that shows you exactly how to:
             </p>
           </div>
-          <div className="mt-14 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-            {[
-              "Step-by-step Mac install guide",
-              "Telegram setup walkthrough",
-              "Identity and memory system setup",
-              "Five ready-to-use templates",
-              "Starter automations",
-              "Troubleshooting and next steps",
-            ].map((item) => (
+          <div className="mt-14 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+            {productBullets.map((item) => (
               <div key={item} className="rounded-[1.75rem] bg-white/6 p-7 ring-1 ring-white/10 backdrop-blur-sm">
                 <p className="text-xl font-medium tracking-[-0.02em] text-white">{item}</p>
               </div>
@@ -180,19 +211,15 @@ export default function Home() {
       <section className="bg-white py-20 sm:py-24 lg:py-28">
         <div className="mx-auto max-w-5xl px-6 sm:px-8 lg:px-10">
           <div className="text-center">
-            <p className="text-sm font-medium text-[#6e6e73]">Believable proof</p>
+            <p className="text-sm font-medium text-[#6e6e73]">What you’ll walk away with</p>
             <h2 className="mt-3 text-4xl font-semibold tracking-[-0.04em] sm:text-5xl">
-              This is for women who want clarity, speed, and a real first result.
+              Clear outcomes, not vague inspiration.
             </h2>
           </div>
-          <div className="mt-14 grid gap-5 md:grid-cols-3">
-            {[
-              "You do not need to be technical to get value from OpenClaw if the setup is explained clearly.",
-              "You do not need to automate everything. You need one assistant that starts helping this week.",
-              "You do not need more AI hype. You need a system that reduces friction and creates momentum.",
-            ].map((item) => (
+          <div className="mt-14 grid gap-5 md:grid-cols-2">
+            {outcomes.map((item) => (
               <div key={item} className="rounded-[1.75rem] bg-[#f5f5f7] p-7 ring-1 ring-black/5">
-                <p className="text-lg leading-8 text-[#1d1d1f]">{item}</p>
+                <p className="text-xl leading-8 tracking-[-0.02em] text-[#1d1d1f]">{item}</p>
               </div>
             ))}
           </div>
@@ -254,7 +281,7 @@ export default function Home() {
           Start with the HerClaw Starter Kit.
         </h2>
         <p className="mx-auto mt-6 max-w-3xl text-xl leading-8 text-[#6e6e73]">
-          If you want the fastest path from confusion to a useful OpenClaw assistant, start here.
+          If you want the fastest path from AI overwhelm to a useful personal income assistant, start here.
         </p>
         <div className="mt-8 text-5xl font-semibold tracking-[-0.05em] sm:text-6xl">$39</div>
         <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
