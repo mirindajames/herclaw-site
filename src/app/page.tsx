@@ -6,6 +6,8 @@ const howItWorks = [
   {
     step: "Step 2",
     title: "Customize your AI assistant for content, work, or business",
+    detail:
+      "Choose a real use case, load the right template, and shape your assistant around how you actually work instead of starting from a blank page.",
   },
   {
     step: "Step 3",
@@ -35,7 +37,7 @@ const objections = [
 ];
 
 const soundsLikeYou = [
-  "You keep hearing about AI… but don’t know where to start",
+  "You keep hearing about AI, but don’t know where to start",
   "Everything feels too technical or confusing",
   "You’ve tried tools but nothing actually sticks",
   "You want to make money online but don’t have a clear system",
@@ -45,7 +47,7 @@ const productBullets = [
   "Set up your own AI assistant",
   "Use it for content, business, and income",
   "Automate tasks that normally take hours",
-  "Actually turn AI into leverage (not just entertainment)",
+  "Actually turn AI into leverage, not just entertainment",
 ];
 
 const outcomes = [
@@ -55,27 +57,33 @@ const outcomes = [
   "A clear path to monetizing your skills online",
 ];
 
-const testimonials = [
+const whatsInside = [
   {
-    quote: "I was completely overwhelmed by AI tools before this. HerClaw made it actually click for me.",
-    name: "Early User",
+    title: "Step-by-step setup walkthrough",
+    body: "A clear Mac setup path so you can get OpenClaw running without piecing together scattered tutorials.",
   },
   {
-    quote: "I finally feel like I understand how to use AI in a practical way.",
-    name: "Beta Tester",
+    title: "AI assistant customization guide",
+    body: "A simple way to shape your assistant around writing, business, content, or life admin.",
   },
   {
-    quote: "This made OpenClaw feel less intimidating and much more useful for real work.",
-    name: "Starter Kit User",
+    title: "Content and income use cases",
+    body: "Practical examples of how to use your assistant for leverage, not just experimentation.",
+  },
+  {
+    title: "Beginner AI workflows",
+    body: "Calm, usable workflows that help you start using AI in daily life without overcomplicating it.",
+  },
+  {
+    title: "Templates and system files",
+    body: "Ready-to-use starting points that reduce friction and help your assistant become useful faster.",
   },
 ];
 
-const valueStack = [
-  "Step-by-step setup walkthrough ($49 value)",
-  "AI assistant customization guide ($39 value)",
-  "Content + income use cases ($29 value)",
-  "Beginner AI workflows ($39 value)",
-  "Templates and systems ($29 value)",
+const quickStartBullets = [
+  "The fastest way to get your first assistant set up without getting lost",
+  "The core files and decisions beginners usually miss",
+  "A clear first-win path so you know what to do next",
 ];
 
 export default function Home() {
@@ -96,7 +104,7 @@ export default function Home() {
       <section className="mx-auto max-w-6xl px-6 pb-20 pt-18 text-center sm:px-8 sm:pb-28 sm:pt-24 lg:px-10 lg:pb-32 lg:pt-28">
         <p className="text-sm font-medium text-[#6e6e73]">A beginner-clear OpenClaw system for women</p>
         <h1 className="mx-auto mt-4 max-w-5xl text-5xl font-semibold tracking-[-0.05em] sm:text-6xl lg:text-7xl">
-          Turn AI into your personal income assistant — even if you’re not tech-savvy.
+          Get a working AI assistant set up this weekend — no coding required.
         </h1>
         <p className="mx-auto mt-6 max-w-3xl text-xl leading-8 text-[#6e6e73] sm:text-2xl">
           Build a simple AI system that helps you create content, automate tasks, and start making money online — without coding, overwhelm, or guesswork.
@@ -116,6 +124,40 @@ export default function Home() {
           <span>Beginner-friendly</span>
           <span>Step-by-step system</span>
           <span>No coding required</span>
+        </div>
+        <div className="mt-10 mx-auto max-w-4xl rounded-[2rem] bg-white p-6 text-left shadow-[0_20px_60px_rgba(0,0,0,0.06)] ring-1 ring-black/5 sm:p-8">
+          <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+            <div>
+              <p className="text-sm font-medium text-[#6e6e73]">Free lead magnet</p>
+              <h2 className="mt-2 text-3xl font-semibold tracking-[-0.03em] sm:text-4xl">
+                The 15-Minute OpenClaw Quick Start
+              </h2>
+              <p className="mt-4 text-lg leading-8 text-[#6e6e73]">
+                Get a cleaner, simpler way to set up your first assistant before you buy anything.
+              </p>
+              <ul className="mt-5 space-y-3 text-base leading-7 text-[#1d1d1f]">
+                {quickStartBullets.map((item) => (
+                  <li key={item} className="flex gap-3">
+                    <span className="mt-[9px] h-2 w-2 rounded-full bg-[#0071e3]" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <form className="flex flex-col gap-4 rounded-[1.5rem] bg-[#f5f5f7] p-5 ring-1 ring-black/5">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="rounded-full border border-black/8 bg-white px-5 py-4 text-[#1d1d1f] outline-none placeholder:text-[#8d8d92]"
+              />
+              <button
+                type="submit"
+                className="rounded-full bg-[#0071e3] px-6 py-4 text-base font-medium text-white transition hover:bg-[#0077ed]"
+              >
+                Download Free Checklist
+              </button>
+            </form>
+          </div>
         </div>
         <div className="mt-14 overflow-hidden rounded-[2.25rem] bg-[radial-gradient(circle_at_top,#ffffff,#ececf1)] px-6 py-10 shadow-[0_40px_120px_rgba(0,0,0,0.10)] sm:px-10 sm:py-14">
           <div className="mx-auto max-w-4xl rounded-[2rem] bg-[#090909] px-7 py-9 text-left text-white sm:px-10 sm:py-12">
@@ -153,6 +195,7 @@ export default function Home() {
                   {item.step.replace("Step ", "")}
                 </div>
                 <h3 className="text-2xl font-semibold tracking-[-0.03em]">{item.title}</h3>
+                {item.detail ? <p className="mt-4 text-base leading-7 text-[#6e6e73]">{item.detail}</p> : null}
               </div>
             ))}
           </div>
@@ -232,26 +275,47 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="bg-white py-20 sm:py-24 lg:py-28">
+        <div className="mx-auto max-w-5xl px-6 sm:px-8 lg:px-10">
+          <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+            <div>
+              <p className="text-sm font-medium text-[#6e6e73]">Why I built HerClaw</p>
+              <div className="mt-6 flex aspect-[4/5] max-w-[280px] items-center justify-center rounded-[2rem] bg-[#f5f5f7] text-sm text-[#6e6e73] ring-1 ring-black/5">
+                Founder photo placeholder
+              </div>
+            </div>
+            <div>
+              <h2 className="text-4xl font-semibold tracking-[-0.04em] sm:text-5xl">
+                A calmer way into AI.
+              </h2>
+              <p className="mt-6 text-lg leading-8 text-[#6e6e73]">
+                Placeholder founder story. Add a short 3 to 4 sentence personal note here about why you built HerClaw,
+                what you noticed women struggling with, and what kind of experience you wanted to create instead.
+              </p>
+              <div className="mt-6">
+                <p className="text-lg font-medium text-[#1d1d1f]">Miranda</p>
+                <p className="text-sm text-[#6e6e73]">Founder</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="py-20 sm:py-24 lg:py-28">
         <div className="mx-auto max-w-5xl px-6 sm:px-8 lg:px-10">
           <div className="text-center">
-            <p className="text-sm font-medium text-[#6e6e73]">Women are already using HerClaw to simplify AI</p>
+            <p className="text-sm font-medium text-[#6e6e73]">Founder’s Note</p>
             <h2 className="mt-3 text-4xl font-semibold tracking-[-0.04em] sm:text-5xl">
-              Practical. Clear. Much less overwhelming.
+              HerClaw is new, and this first version is for founding customers.
             </h2>
+            <p className="mx-auto mt-6 max-w-3xl text-xl leading-8 text-[#6e6e73]">
+              This business is just getting started. The goal is to create a clearer, calmer, more useful path into OpenClaw for women who want real leverage from AI. As real customer feedback comes in, this section will be updated with named testimonials and outcomes.
+            </p>
           </div>
-          <div className="mt-14 grid gap-5 md:grid-cols-3">
-            {testimonials.map((item) => (
-              <div key={item.quote} className="rounded-[1.75rem] bg-white p-8 shadow-[0_16px_50px_rgba(0,0,0,0.06)] ring-1 ring-black/5">
-                <p className="text-lg leading-8 text-[#1d1d1f]">“{item.quote}”</p>
-                <p className="mt-5 text-sm font-medium text-[#6e6e73]">— {item.name}</p>
-              </div>
-            ))}
-          </div>
-          <div className="mt-10 text-center">
-            <a href="#buy" className="text-base font-medium text-[#0071e3] transition hover:text-[#0077ed]">
-              Start with the Starter Kit &gt;
-            </a>
+          <div className="mt-10 rounded-[1.75rem] bg-white p-8 shadow-[0_16px_50px_rgba(0,0,0,0.06)] ring-1 ring-black/5">
+            <p className="text-base leading-8 text-[#6e6e73]">
+              Placeholder for real customer testimonials once available.
+            </p>
           </div>
         </div>
       </section>
@@ -261,27 +325,16 @@ export default function Home() {
           <div className="text-center">
             <p className="text-sm font-medium text-[#6e6e73]">What’s inside the Starter Kit</p>
             <h2 className="mt-3 text-4xl font-semibold tracking-[-0.04em] sm:text-5xl">
-              More value than a simple guide.
+              A complete first system, not just a basic guide.
             </h2>
           </div>
-          <div className="mt-14 rounded-[2rem] bg-[#f5f5f7] p-8 ring-1 ring-black/5 sm:p-10">
-            <div className="grid gap-4">
-              {valueStack.map((item) => (
-                <div key={item} className="rounded-[1.25rem] bg-white px-5 py-4 shadow-[0_10px_30px_rgba(0,0,0,0.04)]">
-                  <p className="text-lg leading-8 text-[#1d1d1f]">{item}</p>
-                </div>
-              ))}
-            </div>
-            <div className="mt-8 flex flex-col gap-3 border-t border-black/8 pt-8 text-center sm:flex-row sm:items-end sm:justify-center sm:gap-8">
-              <div>
-                <p className="text-sm text-[#6e6e73]">Total value</p>
-                <p className="text-3xl font-semibold tracking-[-0.03em]">$185+</p>
+          <div className="mt-14 grid gap-5">
+            {whatsInside.map((item) => (
+              <div key={item.title} className="rounded-[1.75rem] bg-[#f5f5f7] p-7 ring-1 ring-black/5">
+                <h3 className="text-2xl font-semibold tracking-[-0.03em] text-[#1d1d1f]">{item.title}</h3>
+                <p className="mt-3 text-lg leading-8 text-[#6e6e73]">{item.body}</p>
               </div>
-              <div>
-                <p className="text-sm text-[#6e6e73]">Today</p>
-                <p className="text-4xl font-semibold tracking-[-0.04em] text-[#1d1d1f]">$39</p>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
@@ -332,7 +385,7 @@ export default function Home() {
         <div className="mx-auto max-w-5xl px-6 text-center sm:px-8 lg:px-10">
           <p className="text-sm font-medium text-white/55">Not ready to buy yet?</p>
           <h2 className="mt-3 text-4xl font-semibold tracking-[-0.04em] sm:text-5xl">
-            Download the free AI Starter Checklist.
+            The 15-Minute OpenClaw Quick Start
           </h2>
           <p className="mx-auto mt-6 max-w-3xl text-xl leading-8 text-white/70">
             Get the free AI Starter Checklist and learn how to set up your first assistant step-by-step.
@@ -361,6 +414,23 @@ export default function Home() {
         <p className="mx-auto mt-6 max-w-3xl text-xl leading-8 text-[#6e6e73]">
           If you want the fastest path from AI overwhelm to a useful personal income assistant, start here.
         </p>
+        <div className="mt-10 grid gap-6 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
+          <div className="rounded-[1.75rem] bg-[#f5f5f7] p-6 ring-1 ring-black/5">
+            <div className="aspect-[16/10] rounded-[1.25rem] bg-white text-left shadow-[0_12px_40px_rgba(0,0,0,0.05)] ring-1 ring-black/5">
+              <div className="flex h-full items-center justify-center px-6 text-sm text-[#6e6e73]">
+                Placeholder: laptop mockup showing the Starter Kit guide open
+              </div>
+            </div>
+          </div>
+          <div className="space-y-4">
+            <div className="rounded-[1.5rem] bg-[#f5f5f7] p-5 ring-1 ring-black/5 text-left text-sm text-[#6e6e73]">
+              Placeholder: template preview image
+            </div>
+            <div className="rounded-[1.5rem] bg-[#f5f5f7] p-5 ring-1 ring-black/5 text-left text-sm text-[#6e6e73]">
+              Placeholder: screenshots of what’s inside
+            </div>
+          </div>
+        </div>
         <div className="mt-8 text-5xl font-semibold tracking-[-0.05em] sm:text-6xl">$39</div>
         <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
           <a
@@ -376,7 +446,9 @@ export default function Home() {
             Download Free Checklist
           </a>
         </div>
-        <p className="mt-4 text-sm text-[#6e6e73]">Early access pricing — may increase soon</p>
+        <p className="mt-4 text-sm text-[#6e6e73]">
+          30-day money-back guarantee. If it doesn’t help you, email us and we’ll refund you.
+        </p>
       </section>
     </main>
   );
